@@ -18,7 +18,6 @@ def toInt(lst):
 
 report = report_raw.split('\n')
 
-
 # Finds the most common bit in given position
 def mostCommonBit(lst, position):
     one = 0
@@ -28,7 +27,7 @@ def mostCommonBit(lst, position):
             one = one + 1
         elif lst[element][position] == '0':
             zero = zero + 1
-    if one > zero:
+    if one > zero or one == zero:
          return '1'
     else:
         return '0'
@@ -48,7 +47,6 @@ def leastCommonBit(lst, position):
     else:
         return '0'
     
-
 # Determine a specific rate according to given report and
 # rate = specific rate to determine as a string ('gamma' or 'epsilon')
 def generateRate(lst, rate):
@@ -64,10 +62,6 @@ def generateRate(lst, rate):
             new_binary = new_binary + leastCommonBit(lst, position)
             position = position + 1
         return new_binary
-
-
-                  
-
 
 # Determine gamma rate as binary and decimal number
 gamma_bin = generateRate(report, 'gamma')
