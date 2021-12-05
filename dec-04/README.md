@@ -1,4 +1,4 @@
-# Advent of code 3 december 2021
+# Advent of code 4 december 2021
 Instructions from https://adventofcode.com/
 
 ## Day 4: Giant squid
